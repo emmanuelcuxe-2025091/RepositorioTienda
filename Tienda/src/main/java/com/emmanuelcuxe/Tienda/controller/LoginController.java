@@ -12,15 +12,15 @@ public class LoginController {
 
     @GetMapping("/")
     public String inicio() {
-        return "redirect:/usuario";
+        return "redirect:/login";
     }
 
-    @GetMapping("/usuario")
+    @GetMapping("/login")
     public String mostrarLogin () {
-        return "usuario";
+        return "login";
     }
 
-    @PostMapping("/login")
+    @PostMapping("/loginI")
     public String login (@RequestParam String usuario,
                          @RequestParam String password,
                          HttpSession session,
@@ -34,7 +34,7 @@ public class LoginController {
             return "redirect:/home";
         } else {
             model.addAttribute("error", "usuario y contraseña incorrectos");
-            return "usuario";
+            return "login";
         }
     }
 
