@@ -8,19 +8,21 @@
 <body>
 
     <div class="login-container">
+        <h2>Bienvenido</h2>
         <form th:action="@{/loginI}" method="post">
             <div class="input-group">
                 <input type="text" name="usuario" placeholder="Usuario" required>
             </div>
             <div class="input-group">
-                <input type="text" name="password" placeholder="Contraseña" required>
+                <input type="password" name="password" placeholder="Contraseña" required>
             </div>
             <button type="submit">Ingresar</button>
         </form>
 
         <div class="footer-text">
-            @2026 Sistema
+            &copy; 2026 Sistema
         </div>
     </div>
+
 </body>
 </html>
