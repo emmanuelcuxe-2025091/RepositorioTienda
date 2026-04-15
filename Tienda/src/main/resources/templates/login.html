@@ -3,24 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" th:href="@{/LoginStyle.css}">
+    <link rel="stylesheet" th:href="@{/css/LoginStyle.css}">
 </head>
 <body>
 
-    <div class="login-container">
-        <h2>Bienvenido</h2>
-        <form th:action="@{/loginI}" method="post">
-            <div class="input-group">
-                <input type="text" name="usuario" placeholder="Usuario" required>
-            </div>
-            <div class="input-group">
-                <input type="password" name="password" placeholder="Contraseña" required>
-            </div>
-            <button type="submit">Ingresar</button>
-        </form>
+    <div class="card">
+        <div class="left">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User">
+        </div>
 
-        <div class="footer-text">
-            &copy; 2026 Sistema
+        <div class="right">
+            <h2>Bienvenido</h2>
+
+            <div th:if="${error}" class="error">
+                <span th:text="${error}"></span>
+            </div>
+
+            <form th:action="@{/loginI}" method="post">
+                <div class="input-group">
+                    <input type="text" name="username" placeholder="Usuario" required>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" name="contrasena" placeholder="Contraseña" required>
+                </div>
+
+                <button type="submit">Ingresar</button>
+            </form>
+
+            <div class="switch">
+                <a th:href="@{/registro}">¿No tienes cuenta? Regístrate</a>
+            </div>
         </div>
     </div>
 

@@ -377,16 +377,16 @@ call sp_clientes_create('Roberto', 'Jiménez', 'Zona 8, Guatemala', 1);
 call sp_clientes_create('Gabriela', 'Morales', 'Zona 11, Guatemala', 1);
 
 -- Usuarios --
-call sp_usuarios_create('jperez', 'pass1234', 'jperez@mail.com', 'admin', 1);
-call sp_usuarios_create('mlopez', 'pass1234', 'mlopez@mail.com', 'vendedor', 1);
-call sp_usuarios_create('cmartinez', 'pass1234', 'cmartinez@mail.com', 'vendedor', 1);
-call sp_usuarios_create('agarcia', 'pass1234', 'agarcia@mail.com', 'vendedor', 1);
+call sp_usuarios_create('e', '1', 'jperez@mail.com', 'admin', 1);
+call sp_usuarios_create('mlopez', 'pass1234', 'mlopez@mail.com', 'user', 1);
+call sp_usuarios_create('cmartinez', 'pass1234', 'cmartinez@mail.com', 'user', 1);
+call sp_usuarios_create('agarcia', 'pass1234', 'agarcia@mail.com', 'user', 1);
 call sp_usuarios_create('lhernandez', 'pass1234', 'lhernandez@mail.com', 'admin', 1);
-call sp_usuarios_create('sramirez', 'pass1234', 'sramirez@mail.com', 'vendedor', 1);
-call sp_usuarios_create('dtorres', 'pass1234', 'dtorres@mail.com', 'vendedor', 1);
-call sp_usuarios_create('vflores', 'pass1234', 'vflores@mail.com', 'vendedor', 1);
+call sp_usuarios_create('sramirez', 'pass1234', 'sramirez@mail.com', 'user', 1);
+call sp_usuarios_create('dtorres', 'pass1234', 'dtorres@mail.com', 'user', 1);
+call sp_usuarios_create('vflores', 'pass1234', 'vflores@mail.com', 'user', 1);
 call sp_usuarios_create('rjimenez', 'pass1234', 'rjimenez@mail.com', 'admin', 1);
-call sp_usuarios_create('gmorales', 'pass1234', 'gmorales@mail.com', 'vendedor', 1);
+call sp_usuarios_create('gmorales', 'pass1234', 'gmorales@mail.com', 'user', 1);
 
 -- Productos --
 call sp_productos_create('Laptop HP 15"', 3500.00, 20, 1);
