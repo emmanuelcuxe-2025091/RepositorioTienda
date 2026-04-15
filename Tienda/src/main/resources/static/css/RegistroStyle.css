@@ -1,0 +1,124 @@
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #1e1e2f, #3a0ca3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+/* TARJETA */
+.card {
+    display: flex;
+    width: 700px;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+/* LADO IZQUIERDO */
+.left {
+    width: 40%;
+    background: linear-gradient(160deg, #3a0ca3, #4361ee);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* LADO DERECHO */
+.right {
+    width: 60%;
+    padding: 40px;
+    text-align: center;
+}
+
+/* TÍTULOS */
+h2 {
+    color: #1e1e2f;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #6c757d;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #1e1e2f;
+    background-color: #f1f3f5;
+    color: #1e1e2f;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: #6c757d;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #4361ee;
+    box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
+}
+
+select {
+    color: #495057;
+}
+
+/* PASSWORD */
+.password-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+/* BOTÓN */
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #4361ee;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #3a0ca3;
+}
+
+.switch a {
+    text-decoration: none;
+    display: inline-block;
+    color: #4361ee;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 15px;
+
+}
+
+.switch a:hover {
+    color: #3a0ca3;
+}
+
+/* MENSAJES */
+.success {
+    background: #7b2cbf;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.error {
+    background: #a4161a;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}

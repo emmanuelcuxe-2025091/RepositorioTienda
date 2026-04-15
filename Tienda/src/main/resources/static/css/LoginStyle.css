@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #000000, #1d4ed8);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.card {
+    display: flex;
+    width: 700px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgb(0 0 0 / 0.3);
+}
+
+/* LADO IZQUIERDO */
+.left {
+    background: #1d4ed8;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left img {
+    width: 120px;
+}
+
+/* LADO DERECHO */
+.right {
+    background: #FAFAF8;
+    width: 60%;
+    padding: 40px;
+    text-align: center;
+}
+
+.right h2 {
+    margin-bottom: 20px;
+    color: #0a33af;
+}
+
+/* INPUTS */
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border: 1px solid #1d4ed8;
+    background-color: #f1f3f5;
+    color: #1e1e2f;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.input-group input::placeholder {
+    color: #6c757d;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #1d4ed8;
+    box-shadow: 0 0 0 2px rgba(29, 78, 216, 0.2);
+}
+
+/* BOTÓN */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #1d4ed8;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgb(0 0 0 / 0.5);
+}
+
+/* ERROR */
+.error {
+    background: #ff4d4d;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* FOOTER */
+.footer-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #1D4ED8;
+}
+
+.switch {
+    margin-top: 15px;
+}
+
+.switch a {
+    text-decoration: none;
+    color: #1d4ed8;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.switch a:hover {
+    color: #0a33af;
+    text-decoration: underline;
+}
