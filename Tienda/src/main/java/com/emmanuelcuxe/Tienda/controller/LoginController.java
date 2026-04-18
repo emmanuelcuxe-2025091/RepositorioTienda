@@ -30,14 +30,19 @@ public class LoginController {
     }
 
     @PostMapping("/loginI")
-    public String login (@RequestParam String username,
-                         @RequestParam String contrasena,
-                         HttpSession session,
-                         Model model) {
+    public String login(@RequestParam String username,
+                        @RequestParam String contrasena,
+                        HttpSession session,
+                        Model model) {
 
         Usuarios u = service.login(username, contrasena);
 
         if (u != null) {
+            session.setAttribute("usuarioLogueado", u.getUsername());
+            session.setAttribute("rolUsuario", u.getRol());
+            session.setAttribute("fotoUsuario", u.getRol().equals("admin")
+                    ? "/images/Admin.jpg"
+                    : "/images/User.png");
             return "redirect:/home";
         } else {
             model.addAttribute("error", "Credenciales incorrectas");

@@ -72,6 +72,90 @@ body {
     border-color: #EF4444;
 }
 
+/* PERFIL */
+.perfil-wrapper {
+    position: relative;
+    cursor: pointer;
+}
+
+.perfil-foto {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    transition: opacity 0.2s;
+}
+
+.perfil-foto:hover {
+    opacity: 0.85;
+}
+
+.perfil-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 52px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    width: 220px;
+    padding: 16px;
+    z-index: 1000;
+}
+
+.perfil-menu.visible {
+    display: block;
+}
+
+.perfil-menu-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.perfil-menu-foto {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.perfil-nombre {
+    font-weight: bold;
+    font-size: 14px;
+    color: #0d1b4b;
+    margin: 0;
+}
+
+.perfil-rol {
+    font-size: 12px;
+    color: #888;
+    margin: 0;
+}
+
+.perfil-menu hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 10px 0;
+}
+
+.perfil-menu-salir {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #e74c3c;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.perfil-menu-salir:hover {
+    color: #c0392b;
+}
+
+/* LAYOUT */
 .layout {
     display: flex;
     flex: 1;
@@ -172,4 +256,135 @@ body {
     font-weight: 700;
     color: #1E3A8A;
     letter-spacing: 1px;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 14px;
+    padding: 28px;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.modal-content h3 {
+    color: #070964;
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.modal-content input,
+.modal-content select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #c5d0e0;
+    background: #f0f4ff;
+    color: #0d1b4b;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.btn-guardar {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #070964;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-guardar:hover {
+    background: #1d4ed8;
+}
+
+.btn-cancelar {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #e74c3c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-cancelar:hover {
+    background: #c0392b;
+}
+
+/* TABLA Y BOTONES DE ACCIONES */
+.acciones {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn-accion {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-agregar    { background: #2575fc; }
+.btn-actualizar { background: #f39c12; }
+.btn-eliminar   { background: #e74c3c; }
+.btn-buscar     { background: #27ae60; }
+
+.btn-accion:hover { opacity: 0.85; }
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.tabla thead {
+    background: #070964;
+    color: white;
+}
+
+.tabla th, .tabla td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.tabla tbody tr:hover {
+    background: #f0f4ff;
 }
