@@ -1,0 +1,51 @@
+<div th:fragment="contenido">
+
+    <div class="acciones">
+        <button onclick="abrirModal('modalUsuario')">Agregar</button>
+        <button class="btn-accion btn-actualizar" onclick="actualizarUsuario()">Actualizar</button>
+        <button class="btn-accion btn-eliminar" onclick="eliminarUsuario()">Eliminar</button>
+        <input type="text" class="buscar" placeholder="Buscar..." onkeyup="filtrarTabla()">
+    </div>
+
+    <table class="tabla">
+        <thead>
+        <tr>
+            <th>Código</th>
+            <th>Usuario</th>
+            <th>Contraseña</th>
+            <th>Email</th>
+            <th>Rol</th>
+            <th>Estado</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="u : ${usuarios}" onclick="seleccionarFila(this)">
+            <td th:text="${u.codigoUsuario}"></td>
+            <td th:text="${u.username}"></td>
+            <td th:text="${u.contrasena}"></td>
+            <td th:text="${u.email}"></td>
+            <td th:text="${u.rol}"></td>
+            <td th:text="${u.estado}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div id="modalUsuario" class="modal">
+        <div class="modal-content">
+
+            <h3>Agregar Usuario</h3>
+
+            <input id="username" placeholder="Usuario">
+            <input id="contrasena" placeholder="Contraseña">
+            <input id="email" placeholder="Email">
+            <input id="rol" placeholder="Rol">
+
+            <div class="modal-actions">
+                <button class="btn-guardar" onclick="guardarUsuario()">Guardar</button>
+                <button class="btn-cancelar" onclick="cerrarModal('modalUsuario')">Cancelar</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
