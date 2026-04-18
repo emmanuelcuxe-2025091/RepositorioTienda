@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="contenido">
+
+  <div class="acciones">
+    <button onclick="abrirModal('modalProducto')">Agregar</button>
+    <button class="btn-accion btn-actualizar" onclick="actualizarProducto()">Actualizar</button>
+    <button class="btn-accion btn-eliminar" onclick="eliminarProducto()">Eliminar</button>
+      <input type="text" class="buscar" placeholder="Buscar..." onkeyup="filtrarTabla()">
+  </div>
+
+  <table class="tabla">
+    <thead>
+    <tr>
+      <th>Código</th>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th>Stock</th>
+      <th>Estado</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="p : ${productos}" onclick="seleccionarFila(this)">
+      <td th:text="${p.codigoProducto}"></td>
+      <td th:text="${p.nombreProducto}"></td>
+      <td th:text="${p.precio}"></td>
+      <td th:text="${p.stock}"></td>
+      <td th:text="${p.estado}"></td>
+    </tr>
+    </tbody>
+  </table>
+
+    <div id="modalProducto" class="modal">
+        <div class="modal-content">
+
+            <h3>Agregar Producto</h3>
+
+            <input id="nombreProducto" placeholder="Nombre">
+            <input id="precio" placeholder="Precio">
+            <input id="stock" placeholder="Stock">
+
+            <div class="modal-actions">
+                <button class="btn-guardar" onclick="guardarProducto()">Guardar</button>
+                <button class="btn-cancelar" onclick="cerrarModal('modalProducto')">Cancelar</button>
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>
