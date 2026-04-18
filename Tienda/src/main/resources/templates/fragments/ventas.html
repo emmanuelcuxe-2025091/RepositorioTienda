@@ -1,0 +1,52 @@
+<div th:fragment="contenido">
+
+  <div class="acciones">
+    <button onclick="abrirModal('modalVenta')">Agregar</button>
+    <button class="btn-accion btn-actualizar" onclick="actualizarVenta()">Actualizar</button>
+    <button class="btn-accion btn-eliminar" onclick="eliminarVenta()">Eliminar</button>
+      <input type="text" class="buscar" placeholder="Buscar..." onkeyup="filtrarTabla()">
+  </div>
+
+  <table class="tabla">
+    <thead>
+    <tr>
+      <th>Código</th>
+      <th>Fecha</th>
+      <th>Total</th>
+      <th>Estado</th>
+      <th>Cliente</th>
+      <th>Usuario</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="v : ${ventas}" onclick="seleccionarFila(this)">
+      <td th:text="${v.codigoVenta}"></td>
+      <td th:text="${v.fechaVenta}"></td>
+      <td th:text="${v.total}"></td>
+      <td th:text="${v.estado}"></td>
+      <td th:text="${v.clientesDpiCliente}"></td>
+      <td th:text="${v.usuariosCodigoUsuario}"></td>
+    </tr>
+    </tbody>
+  </table>
+
+    <div id="modalVenta" class="modal">
+        <div class="modal-content">
+
+            <h3>Agregar Venta</h3>
+
+            <input id="fechaVenta" type="date">
+            <input id="total" placeholder="Total">
+            <input id="cliente" placeholder="Código Cliente">
+            <input id="usuario" placeholder="Código Usuario">
+
+            <div class="modal-actions">
+                <button class="btn-guardar" onclick="guardarVenta()">Guardar</button>
+                <button class="btn-cancelar" onclick="cerrarModal('modalVenta')">Cancelar</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
