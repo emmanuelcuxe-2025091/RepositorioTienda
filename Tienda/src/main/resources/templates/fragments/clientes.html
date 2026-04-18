@@ -1,0 +1,48 @@
+<div th:fragment="contenido">
+
+    <div class="acciones">
+        <button onclick="abrirModal('modalCliente')">Agregar</button>
+        <button class="btn-accion btn-actualizar" onclick="actualizarCliente()">Actualizar</button>
+        <button class="btn-accion btn-eliminar" onclick="eliminarCliente()">Eliminar</button>
+        <input type="text" class="buscar" placeholder="Buscar..." onkeyup="filtrarTabla()">
+    </div>
+
+    <table class="tabla">
+        <thead>
+        <tr>
+            <th>DPI</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Dirección</th>
+            <th>Estado</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="c : ${clientes}" onclick="seleccionarFila(this)">
+            <td th:text="${c.dpiCliente}"></td>
+            <td th:text="${c.nombreCliente}"></td>
+            <td th:text="${c.apellidoCliente}"></td>
+            <td th:text="${c.direccion}"></td>
+            <td th:text="${c.estado}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- MODAL CLIENTES -->
+    <div id="modalCliente" class="modal">
+        <div class="modal-content">
+            <h3>Agregar Cliente</h3>
+
+            <input id="nombre" placeholder="Nombre">
+            <input id="apellido" placeholder="Apellido">
+            <input id="direccion" placeholder="Dirección">
+
+            <div class="modal-actions">
+                <button class="btn-guardar" onclick="guardarCliente()">Guardar</button>
+                <button class="btn-cancelar" onclick="cerrarModal('modalCliente')">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+</div>
