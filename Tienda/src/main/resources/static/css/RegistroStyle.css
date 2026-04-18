@@ -6,7 +6,7 @@ body {
     align-items: center;
     font-family: 'Poppins', sans-serif;
 }
-/* TARJETA */
+
 .card {
     display: flex;
     width: 700px;
@@ -16,7 +16,6 @@ body {
     box-shadow: 0 15px 40px rgba(0,0,0,0.4);
 }
 
-/* LADO IZQUIERDO */
 .left {
     width: 40%;
     background: linear-gradient(160deg, #3a0ca3, #4361ee);
@@ -25,14 +24,12 @@ body {
     align-items: center;
 }
 
-/* LADO DERECHO */
 .right {
     width: 60%;
     padding: 40px;
     text-align: center;
 }
 
-/* TÍTULOS */
 h2 {
     color: #1e1e2f;
     margin-bottom: 5px;
@@ -69,13 +66,11 @@ select {
     color: #495057;
 }
 
-/* PASSWORD */
 .password-wrapper {
     position: relative;
     margin-bottom: 15px;
 }
 
-/* BOTÓN */
 button {
     width: 100%;
     padding: 12px;
@@ -106,7 +101,6 @@ button:hover {
     color: #3a0ca3;
 }
 
-/* MENSAJES */
 .success {
     background: #7b2cbf;
     color: white;

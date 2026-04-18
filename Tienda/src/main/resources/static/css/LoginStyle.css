@@ -13,7 +13,6 @@ body {
     background: linear-gradient(135deg, #000000, #1d4ed8);
 }
 
-/* CONTENEDOR PRINCIPAL */
 .card {
     display: flex;
     width: 700px;
@@ -22,7 +21,6 @@ body {
     box-shadow: 0 15px 25px rgb(0 0 0 / 0.3);
 }
 
-/* LADO IZQUIERDO */
 .left {
     background: #1d4ed8;
     width: 40%;
@@ -35,7 +33,6 @@ body {
     width: 120px;
 }
 
-/* LADO DERECHO */
 .right {
     background: #FAFAF8;
     width: 60%;
@@ -48,7 +45,6 @@ body {
     color: #0a33af;
 }
 
-/* INPUTS */
 .input-group input {
     width: 100%;
     padding: 12px 15px;
@@ -71,7 +67,6 @@ body {
     box-shadow: 0 0 0 2px rgba(29, 78, 216, 0.2);
 }
 
-/* BOTÓN */
 button {
     width: 100%;
     padding: 12px;
@@ -90,7 +85,6 @@ button:hover {
     box-shadow: 0 5px 15px rgb(0 0 0 / 0.5);
 }
 
-/* ERROR */
 .error {
     background: #ff4d4d;
     color: white;
@@ -99,7 +93,6 @@ button:hover {
     margin-bottom: 15px;
 }
 
-/* FOOTER */
 .footer-text {
     margin-top: 20px;
     font-size: 14px;

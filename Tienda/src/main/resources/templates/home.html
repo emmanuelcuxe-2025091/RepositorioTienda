@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Menú Principal</title>
-    <link rel="stylesheet" th:href="@{/HomeStyle.css}">
+    <link rel="stylesheet" th:href="@{/css/HomeStyle.css}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
@@ -11,33 +11,34 @@
     <header class="navbar">
         <h1><i class="bi bi-shop"></i> Tienda</h1>
         <div class="user-info">
-            <span>Bienvenido, <strong th:text="${session.usuarioLogueado}">Usuario</strong></span>
-            <a th:href="@{/login}" class="btn-logout"> <i class="bi bi-box-arrow-right"></i> Salir de sesión</a>
+            <a th:href="@{/login}" class="btn-logout    "> <i class="bi bi-box-arrow-right"></i> Salir de sesión</a>
         </div>
     </header>
 
     <div class="layout">
         <aside class="sidebar">
-            <a th:href="@{/home}" class="menu-item active"><i class="bi bi-house-door"></i>Inicio</a>
-            <a th:href="@{/clientes}" class="menu-item"><i class="bi bi-people"></i>Clientes</a>
-            <a th:href="@{/usuarios}" class="menu-item"><i class="bi bi-person-gear"></i>Usuarios</a>
-            <a th:href="@{/productos}" class="menu-item"><i class="bi bi-box-seam"></i>Productos</a>
-            <a th:href="@{/ventas}" class="menu-item"><i class="bi bi-cart3"></i>Ventas</a>
-            <a th:href="@{/detalleVenta}" class="menu-item"><i class="bi bi-receipt"></i>Detalle Venta</a>
+            <a href="#" class="menu-item active"><i class="bi bi-house-door"></i>Inicio</a>
+            <a href="#" class="menu-item" onclick="cargarSeccion('/home/seccion/clientes', this)">
+                <i class="bi bi-people"></i>Clientes</a>
+            <a href="#" class="menu-item" onclick="cargarSeccion('/home/seccion/usuarios', this)">
+                <i class="bi bi-person-gear"></i>Usuarios</a>
+            <a href="#" class="menu-item" onclick="cargarSeccion('/home/seccion/productos', this)">
+                <i class="bi bi-box-seam"></i>Productos</a>
+            <a href="#" class="menu-item" onclick="cargarSeccion('/home/seccion/ventas', this)">
+                <i class="bi bi-cart3"></i>Ventas</a>
+            <a href="#" class="menu-item" onclick="cargarSeccion('/home/seccion/detalleVenta', this)">
+                <i class="bi bi-receipt"></i>Detalle Venta</a>
         </aside>
 
         <main class="content">
-            <div class="welcome-banner">
-                <div>
-                    <h2>¡Bienvenido!</h2>
+            <div id="area-contenido">
+                <div class="icono-central">
+                    <i class="bi bi-shop"></i>
                 </div>
-            </div>
-
-            <div class="icono-central">
-                <i class="bi bi-shop"></i>
             </div>
         </main>
     </div>
 
+    <script th:src="@{/js/home.js}"></script>
 </body>
 </html>
