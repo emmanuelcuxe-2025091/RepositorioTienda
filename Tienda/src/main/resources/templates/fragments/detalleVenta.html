@@ -1,0 +1,53 @@
+<div th:fragment="contenido">
+
+    <div class="acciones">
+        <button onclick="abrirModal('modalDetalle')">Agregar</button>
+        <button class="btn-accion btn-actualizar" onclick="actualizarDetalle()">Actualizar</button>
+        <button class="btn-accion btn-eliminar" onclick="eliminarDetalle()">Eliminar</button>
+        <input type="text" class="buscar" placeholder="Buscar..." onkeyup="filtrarTabla()">
+    </div>
+
+    <table class="tabla">
+        <thead>
+        <tr>
+            <th>Código</th>
+            <th>Cantidad</th>
+            <th>Precio Unitario</th>
+            <th>Subtotal</th>
+            <th>Producto</th>
+            <th>Venta</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="d : ${detalleVenta}" onclick="seleccionarFila(this)">
+            <td th:text="${d.codigoDetalleVenta}"></td>
+            <td th:text="${d.cantidad}"></td>
+            <td th:text="${d.precioUnitario}"></td>
+            <td th:text="${d.subtotal}"></td>
+            <td th:text="${d.productosCodigoProducto}"></td>
+            <td th:text="${d.ventasCodigoVenta}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div id="modalDetalle" class="modal">
+        <div class="modal-content">
+
+            <h3>Agregar Detalle Venta</h3>
+
+            <input id="cantidad" placeholder="Cantidad">
+            <input id="precioUnitario" placeholder="Precio Unitario">
+            <input id="subtotal" placeholder="Subtotal">
+            <input id="producto" placeholder="Código Producto">
+            <input id="venta" placeholder="Código Venta">
+
+            <div class="modal-actions">
+                <button class="btn-guardar" onclick="guardarDetalle()">Guardar</button>
+                <button class="btn-cancelar" onclick="cerrarModal('modalDetalle')">Cancelar</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
