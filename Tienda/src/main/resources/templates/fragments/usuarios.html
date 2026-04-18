@@ -1,7 +1,9 @@
 <div th:fragment="contenido">
 
     <div class="acciones">
-        <button onclick="abrirModal('modalUsuario')">Agregar</button>
+        <button class="btn-accion btn-agregar" onclick="abrirModal('modalUsuario')">
+            <i class="bi bi-plus-circle"></i> Agregar
+        </button>
         <button class="btn-accion btn-actualizar" onclick="actualizarUsuario()">Actualizar</button>
         <button class="btn-accion btn-eliminar" onclick="eliminarUsuario()">Eliminar</button>
         <input type="text" class="buscar" placeholder="Buscar..." onkeyup="filtrarTabla()">
